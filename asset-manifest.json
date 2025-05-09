@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mlb-standings-app/static/css/main.37c37061.css",
+    "main.js": "/mlb-standings-app/static/js/main.33c35a4d.js",
+    "static/js/453.daf1700f.chunk.js": "/mlb-standings-app/static/js/453.daf1700f.chunk.js",
+    "index.html": "/mlb-standings-app/index.html",
+    "main.37c37061.css.map": "/mlb-standings-app/static/css/main.37c37061.css.map",
+    "main.33c35a4d.js.map": "/mlb-standings-app/static/js/main.33c35a4d.js.map",
+    "453.daf1700f.chunk.js.map": "/mlb-standings-app/static/js/453.daf1700f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37c37061.css",
+    "static/js/main.33c35a4d.js"
+  ]
+}
