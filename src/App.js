@@ -56,36 +56,51 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <h2>American League Standings</h2>
-      {standings.al.map((division, index) => (
-        <div key={index}>
-          <h3>{division.divisionName}</h3>
-          <ul>
-            {division.teams.map((team, idx) => (
-              <li key={idx}>
-                {team.name}: {team.wins}-{team.losses} ({(team.pct * 100).toFixed(2)}%)
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+    <div className="min-h-screen bg-gray-100 py-8 px-4">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">MLB Standings</h1>
 
-      <h2>National League Standings</h2>
-      {standings.nl.map((division, index) => (
-        <div key={index}>
-          <h3>{division.divisionName}</h3>
-          <ul>
-            {division.teams.map((team, idx) => (
-              <li key={idx}>
-                {team.name}: {team.wins}-{team.losses} ({(team.pct * 100).toFixed(2)}%)
-              </li>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {/* American League */}
+          <div>
+            <h2 className="text-3xl font-semibold text-blue-500 mb-4">American League Standings</h2>
+            {standings.al.map((division, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-lg mb-6">
+                <h3 className="text-2xl font-semibold text-gray-800">{division.divisionName}</h3>
+                <ul className="space-y-2 mt-4">
+                  {division.teams.map((team, idx) => (
+                    <li key={idx} className="flex justify-between text-gray-700">
+                      <span>{team.name}</span>
+                      <span>{team.wins}-{team.losses} ({(team.pct * 100).toFixed(2)}%)</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
+
+          {/* National League */}
+          <div>
+            <h2 className="text-3xl font-semibold text-blue-500 mb-4">National League Standings</h2>
+            {standings.nl.map((division, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-lg mb-6">
+                <h3 className="text-2xl font-semibold text-gray-800">{division.divisionName}</h3>
+                <ul className="space-y-2 mt-4">
+                  {division.teams.map((team, idx) => (
+                    <li key={idx} className="flex justify-between text-gray-700">
+                      <span>{team.name}</span>
+                      <span>{team.wins}-{team.losses} ({(team.pct * 100).toFixed(2)}%)</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
+      </div>
     </div>
   );
 };
 
 export default App;
+
