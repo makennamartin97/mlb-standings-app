@@ -22,6 +22,7 @@ const App = () => {
         ]);
 
         const alData = await alResponse.json();
+        console.log('aldata',alData)
         const nlData = await nlResponse.json();
 
         const processStandings = (data) => {
@@ -32,7 +33,7 @@ const App = () => {
                 name: team.team.name,
                 wins: team.wins,
                 losses: team.losses,
-                pct: team.winPercentage
+                pct: team.winningPercentage
               }))
               .sort((a, b) => b.pct - a.pct); // Sort by winning percentage in descending order
 
